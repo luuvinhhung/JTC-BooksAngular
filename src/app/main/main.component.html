@@ -1,0 +1,36 @@
+<div>
+  <div class="top">
+
+    <p style="margin: 0px; padding-top: 40px; display: inline-block; padding-left: 100px;">POPULAR E-BOOKS</p>
+
+    <div class="toggle">
+      <div>
+        <button class="girdBtn" (click)='changeToGrid()'>
+          <i class="fas fa-th"></i>
+        </button>
+        <button class="listBtn" (click)='changeToList()'>
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+
+    </div>
+    <div class="search">
+      <input [(ngModel)]="searchBook" name="searchInput" placeholder="What're you looking for?"/>
+      
+      <img src='assets/searchIcon.png'>
+    </div>
+  </div>
+
+  <div class="listBooks">
+    <div [ngClass]="stage?'gridStage':'listStage'" *ngFor='let book of books | search: searchBook'>
+        
+      <img [src]='book.cover'>
+
+      <div class="bookDetails">
+        <p>{{book.title | uppercase}}</p>
+        <button> <strong>GET IT NOW</strong> </button>
+      </div>
+
+    </div>
+  </div>
+</div>

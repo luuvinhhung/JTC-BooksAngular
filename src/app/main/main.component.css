@@ -1,0 +1,109 @@
+.top {
+  height: 110px;
+}
+.toggle {
+  display: inline;
+  padding-top: 40px;
+  padding-left: 50px;
+  padding-right: 100px;
+  float: right;
+}
+.search {
+  display: inline;
+  float: right;
+}
+.search img{
+  padding-top: 40px;
+  height: 30px;
+  width: 30px;
+  margin: 0px;
+}
+.search input {
+  border: none;
+  height: 25px;
+  font-size: 25px;
+  outline: none;
+  width: 0;
+  transition: 0.5s;
+  display: inline;
+}
+.search:hover input{
+  width: 300px;
+}
+/* design Btn */
+.listBtn {
+  float: right;
+  height: 30px;
+  margin: 0px;
+  width: 70px;
+  background-color: white;
+  border: 1px #D0D1D1 solid;
+  -webkit-border-top-left-radius:42px;
+	-moz-border-radius-topleft:42px;
+  border-top-left-radius:42px;
+  -webkit-border-bottom-left-radius:42px;
+	-moz-border-radius-bottomleft:42px;
+  border-bottom-left-radius:42px;
+  cursor: pointer;
+}
+.girdBtn {
+  float: right;
+  height: 30px;
+  width: 70px;
+  margin: 0px;
+  background-color: white;
+  border: 1px #D0D1D1 solid;
+  -webkit-border-top-right-radius:25px;
+	-moz-border-radius-topright:25px;
+	border-top-right-radius:25px;
+	-webkit-border-bottom-right-radius:25px;
+	-moz-border-radius-bottomright:25px;
+  border-bottom-right-radius:25px;
+  cursor: pointer;
+}
+
+/* Design ChangeStage */
+.listBooks {
+  width: 85%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.listBooks button{
+  min-width: 150px;
+  height: 30px;
+  border: none;
+  background-color: white;
+  box-shadow: 3px 3px 3px #666;
+  -moz-box-shadow: 3px 3px 3px #666;
+  -webkit-box-shadow: 3px 3px 3px #666;
+  border-radius: 25px;
+  cursor: pointer;
+}
+.listBooks img{
+  padding-top: 20px;
+  height: 300px;
+  width: 250px;
+}
+
+.gridStage {
+  background-color: #F9F9F9;
+  height: 500px;
+  width: 20%;
+  display: inline;
+  font-size: 20px;
+  margin: 30px;
+}
+.listStage {
+  background-color: #F9F9F9;
+  width: 100%;
+  font-size: 30px;
+  height: 350px;
+  text-align: left;
+  display: flex;
+  margin: 30px;
+  padding-left: 30px;
+}
