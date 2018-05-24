@@ -64,7 +64,7 @@
 
 /* Design ChangeStage */
 .listBooks {
-  width: 85%;
+  width: 90%;
   margin: auto;
   display: flex;
   flex-direction: row;
@@ -92,7 +92,7 @@
 .gridStage {
   background-color: #F9F9F9;
   height: 500px;
-  width: 20%;
+  width: 340px;
   display: inline;
   font-size: 20px;
   margin: 30px;
