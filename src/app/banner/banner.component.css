@@ -19,3 +19,9 @@
     height: calc(100vh - 150px);
     background: linear-gradient(to bottom right,#b7f391,#33f5e3);
 }
+@media only screen and (max-width: 1024px) { 
+    .pic img{
+        width: 50%;
+    }
+
+}
