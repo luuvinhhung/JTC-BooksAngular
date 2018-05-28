@@ -8,7 +8,7 @@
     <button>SIGNUP</button>
     <div class="search">
         <img src='assets/searchIcon.png'>
-        <input name="search-input" placeholder="What're you looking for?" />
+        <input [(ngModel)]="searchBook" (keyup.enter)='search(searchBook)' name="searchInput" placeholder="What're you looking for?"/>
     </div>
   </div>
   

@@ -15,14 +15,14 @@
 
     </div>
     <div class="search">
-      <input [(ngModel)]="searchBook" name="searchInput" placeholder="What're you looking for?"/>
+      <input [(ngModel)]="searchBook" (keyup.enter)='search(searchBook)' name="searchInput" placeholder="What're you looking for?"/>
       
       <img src='assets/searchIcon.png'>
     </div>
   </div>
 
   <div class="listBooks">
-    <div [ngClass]="stage?'gridStage':'listStage'" *ngFor='let book of books | search: searchBook'>
+    <div [ngClass]="stage?'gridStage':'listStage'" *ngFor='let book of books'>
         
       <img [src]='book.cover'>
 

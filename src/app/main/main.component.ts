@@ -1,3 +1,4 @@
+import { BookService } from './../services/book.service';
 import { Component, OnInit } from '@angular/core';
 import { IBook } from '../models/IBook';
 
@@ -7,25 +8,25 @@ import { IBook } from '../models/IBook';
   styleUrls: ['./main.component.css']
 })
 export class MainComponent implements OnInit {
-  books: IBook[] = [
-  {cover: '../assets/asset-0.png', title: 'Xây dựng RESTful API với Nodejs', linkDown: 'laptrinhvien.io'},
-  {cover: '../assets/asset-1.png', title: 'Giáo trình Front-End cơ bản', linkDown: 'laptrinhvien.io'},
-  {cover: '../assets/asset-2.png', title: 'Lập trình C++', linkDown: 'laptrinhvien.io'},
-  {cover: '../assets/asset-3.png', title: 'Angular cơ bản', linkDown: 'laptrinhvien.io'},
-  {cover: '../assets/asset-4.png', title: 'Xây dựng RESTful API với Nodejs', linkDown: 'laptrinhvien.io'},
-  {cover: '../assets/asset-5.png', title: 'mongoDB', linkDown: ''}
-];
+  books: IBook[];
   stage: boolean;
   list: boolean;
   gird: boolean;
   searchBook: string;
-  constructor() { }
+  constructor(private _bookService: BookService) { }
 
   ngOnInit() {
     this.gird = true;
     this.list = false;
     this.stage = true;
     this.searchBook = '';
+    this._bookService.getBooks();
+    this._bookService.books.subscribe((books) => {
+      this.books = books;
+    });
+  }
+  search(kw) {
+    this._bookService.searchBook(kw);
   }
   changeToGrid() {
     if (this.gird) {
