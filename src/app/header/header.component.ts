@@ -7,10 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
+  searchBook: String = '';
   constructor(private _bookService: BookService) { }
-
   ngOnInit() {
+
   }
   search(kw) {
     this._bookService.searchBook(kw);
